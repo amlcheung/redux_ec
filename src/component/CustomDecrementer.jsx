@@ -8,6 +8,7 @@ export default function CustomDecrementer(props) {
     function decrement() {
 
         const action = {
+            type: 'DECREMENT',
             decrementAmount: props.decrementAmount,
         }
 
@@ -17,6 +18,6 @@ export default function CustomDecrementer(props) {
     
 
     return (
-        <button onClick={decrement}>Decrement</button>
+        <button onClick={decrement}>Decrement by {props.decrementAmount}</button>
     )
 }
